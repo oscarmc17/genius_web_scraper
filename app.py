@@ -8,8 +8,12 @@ html = requests.get(url)
 
 soup = BeautifulSoup(html.content, 'html.parser')
 
-lst = soup.find_all("h3", class_='chart_row-content-title')
+tracks = soup.find_all(class_='chart_row-content-title')
 
-print(lst)
+count = 0
+new = []
 
-# print(soup.prettify())
+for song in tracks:
+    # new.append(song)
+    count += 1
+    print("{}. {}".format(count, song.text.strip()))
