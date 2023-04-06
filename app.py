@@ -23,13 +23,7 @@ count = 0
 
 print(f'\nArtist: {artist_name}\nAlbum Name: {album_title}\n{release_date}\n')
 
-for song in tracks:
-    count += 1
-    song_title = song.text.strip().replace('Lyrics', '')
-
-    print("{}. {}".format(count, song_title))
-
-# for i, title in enumerate(tracks, start=1):
-#     # Remove the "Lyrics" text from the track title
-#     title_text = title.text.strip().replace(' Lyrics', '')
-#     print(f"{i}. {title_text}")
+for i, title in enumerate(tracks, start=1):
+    # Remove the "Lyrics" text from the track title
+    title_text = title.text.strip().replace(' Lyrics', '')
+    print(f"{i}. {title_text}")
